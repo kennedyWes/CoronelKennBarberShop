@@ -1,0 +1,466 @@
+body {
+	background-color: #DDDDDD;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: linear-gradient(#DDDDDD, #888888);
+	margin-top: 10px;
+	height: 370px;
+	width: 100%;
+}
+
+#logo-header {
+	margin-top: 70px;
+}
+
+h1 {
+	display: inline-block;
+	vertical-align: top;
+	width: 64%;
+}
+
+.titulo {
+	font-family: 'New Rocker', cursive;
+	text-align: center;
+	font-size: 36px;
+	margin-top: 120px;
+	margin-left: 60px;
+	margin-right: 60px;
+	padding: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 6px solid rgba(124, 10, 39, 0.925);
+	border-radius: 17px;
+}
+
+#pesquisa {
+	background-color: #EEEEEE;
+	text-align: right;
+	font-size: 18px;
+	display: inline-block;
+	height: 40px;
+	width: 45%;
+	margin-left: 27%;
+	margin-bottom: 40px;
+	border: 1px solid rgba(124, 10, 39, 0.925);
+	border-radius: 6px;
+}
+
+.menu {
+	font-family: 'New Rocker', cursive;
+	position: absolute;
+	margin-left: 25px;
+	top: 20px;
+}
+
+.menu-itens {
+	display: inline-block;
+	margin: 0 17px 0 60px;
+}
+
+nav li:hover {
+	transform: scale(1.1);
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+main {
+	background-image: url(../imagens/Background-2.jpg);
+	margin-top: 30px;
+}
+
+.formulario-novo {
+	display: inline-block;
+	background: linear-gradient(#DDDDDD, #888888);
+	width: 38%;
+	margin-right: 8%;
+	margin-left: 120px;
+	margin-top: 130px;
+	margin-bottom: 80px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	vertical-align: top;
+	border: 1px solid rgba(124, 10, 39, 0.925);
+	border-radius: 10px;
+}
+
+.formulario-novo:hover {
+	transform: scale(1.1);
+	border-color: #C78C19;
+}
+
+#titulo-formulario-novo {
+	font-size: 25px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+#sub-formulario-novo {
+	font-family: 'Italianno', cursive;
+	font-size: 32px;
+	text-align: center;
+	padding-top: 0px;
+}
+
+#sub-formulario-novo:hover {
+	transform: scale(1.3);
+	font-style: italic;
+	color: rgba(124, 10, 39, 0.925);
+	text-decoration: underline;
+}
+
+.formulario-cadastro-novo {
+	display: inline-block;
+	margin-top: 30px;
+	margin-left: 70px;
+	margin-right: 20px;
+	padding-bottom: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#obrigatório {
+	color: #000000;
+	font-weight: bold;
+}
+
+form label {
+	display: inline-block;
+	font-size: 15px;
+	margin: 0 0 10px;
+	margin-bottom: 6px;
+	color: rgba(124, 10, 39, 0.925);
+}
+
+.campo-formulario {
+	display: inline-block;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 85%;
+}
+
+#titulo-cpf {
+	width: 49%;
+}
+
+#cpf {
+	display: inline-block;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 6%;
+	padding: 12px;
+	width: 37%;
+}
+
+#nascimento {
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 35px;
+	padding: 10px;
+	width: 168px;
+}
+
+#cep {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 35px;
+	padding: 10px;
+	width: 49%;
+}
+
+#buscar-cep {
+	font-size: 14px;
+	background-color: rgba(124, 10, 39, 0.925);
+	size: : 90px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	color: #FFFFFF;
+	cursor: pointer;
+	transition: 1s background-color;
+}
+
+#buscar-cep:hover {
+	background-color:#C78C19;
+	transform: scale(1.1);
+}
+
+#buscar-cep:active {
+	background-color:#C78C19;
+}
+
+#titulo-endereco {
+	display: block;
+}
+
+#titulo-complemento {
+	width: 45%;
+}
+
+#titulo-bairro {
+	margin-right: 10%;
+}
+
+#complemento {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 20px;
+	padding: 10px;
+	width: 35%;
+}
+
+#bairro {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 35px;
+	padding: 10px;
+	width: 40%;
+}
+
+#titulo-cidade {
+	width: 75%;
+}
+
+#cidade {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 26px;
+	padding: 10px;
+	width: 64%;
+}
+
+#estado {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	width: 15%;
+	margin-right: 70px;
+	margin: 0 0 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: rgba(124,10,39, 0,925);
+	color: #C78C19;
+}
+
+#titulo-telefone {
+	width: 33%;
+}
+
+#telefone {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	padding-left: 5px;
+	padding: 10px;
+	width: 25%;
+}
+
+#email1 {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	padding: 10px;
+	width: 52%;
+}
+
+#confimeSenha {
+	margin-bottom: 40px;
+}
+
+.checkbox {
+	font-weight: normal;
+	font-size: 15px;
+	margin-left: -17px;
+}
+
+#texto-checkbox-1 {
+	margin-top: 80px;
+	font-size: 18px;
+}
+
+#texto-checkbox-2 {
+	margin-bottom: 20px;
+}
+
+#entrar {
+	font-size: 14px;
+	text-align: center;
+	background-color: rgba(124, 10, 39, 0.925);
+	size: : 140px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-left: 150px;
+	margin-top: 30px;
+	margin-bottom: 25px;
+	color: #FFFFFF;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 1.5s all;
+
+}
+
+#entrar:hover {
+	transform: scale(1.1);
+	text-decoration: underline;
+	background-color:#C78C19;
+}
+
+#entrar:active {
+	background-color:#C78C19;
+}
+
+.formulario-antigo {
+	display: inline-block;
+	background: linear-gradient(#DDDDDD, #888888);
+	width: 36%;
+	margin-left: 40px;
+	margin-top: 130px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	vertical-align: top;
+	border: 1px solid rgba(124, 10, 39, 0.925);
+	border-radius: 10px;
+}
+
+.formulario-antigo:hover {
+	transform: scale(1.1);
+	border-color: #C78C19;
+}
+
+#titulo-formulario-antigo {
+	font-size: 25px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+#sub-formulario-antigo {
+	font-family: 'Italianno', cursive;
+	font-size: 32px;
+	text-align: center;
+	padding-top: 0px;
+}
+
+#sub-formulario-antigo:hover {
+	transform: scale(1.3);
+	font-style: italic;
+	color: rgba(124, 10, 39, 0.925);
+	text-decoration: underline;
+}
+
+.formulario-contato-antigo {
+	display: block;
+	margin-top: 30px;
+	margin-left: 70px;
+	margin-right: 20px;
+	padding-bottom: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#email-2 {
+	margin-right: 20px;
+}
+
+#senha-2 {
+	margin-right: 20px;
+}
+
+footer {
+	display: inline-block;
+	background-color: #373737;
+	margin-top: 20px;
+	width: 100%;
+}
+
+table {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+	margin-left: 70px;
+	margin-right: 21%;
+}
+
+thead {
+	display: block;
+
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	text-align: center;
+}
+
+th {
+	padding-bottom: 10px;
+	color: white;
+	padding-right: 16px;
+}
+
+td {
+	color: white;
+	padding-left: 5px;
+	padding-right: 9px;
+}
+
+#telefone-footer {
+	display: inline-block;
+	position: absolute;
+	margin-left: -585px;
+	margin-top: 170px;
+}
+
+#logo-footer {
+	text-align: center;
+	padding-right: 10px;
+	width: 177px;
+	height: 250px;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+#texto-footer {
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 14px;
+	color: #FFFFFF;
+}

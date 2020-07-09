@@ -1,0 +1,141 @@
+body {
+	background-color: #DDDDDD;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: linear-gradient(#DDDDDD, #888888);
+	margin-top: 10px;
+	height: 370px;
+	width: 100%;
+}
+
+#logo-header {
+	margin-top: 70px;
+}
+
+h1 {
+	display: inline-block;
+	vertical-align: top;
+	width: 64%;
+}
+
+.titulo {
+	font-family: 'New Rocker', cursive;
+	text-align: center;
+	font-size: 36px;
+	margin-top: 120px;
+	margin-left: 60px;
+	margin-right: 60px;
+	padding: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 6px solid rgba(124, 10, 39, 0.925);
+	border-radius: 17px;
+}
+
+#pesquisa {
+	background-color: #EEEEEE;
+	text-align: right;
+	font-size: 18px;
+	display: inline-block;
+	height: 40px;
+	width: 45%;
+	margin-left: 27%;
+	margin-bottom: 40px;
+	border: 1px solid rgba(124, 10, 39, 0.925);
+	border-radius: 6px;
+}
+
+.menu {
+	font-family: 'New Rocker', cursive;
+	position: absolute;
+	margin-left: 25px;
+	top: 20px;
+}
+
+.menu-itens {
+	display: inline-block;
+	margin: 0 17px 0 60px;
+}
+
+nav li:hover {
+	transform: scale(1.1);
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+main {
+	width: 940px;
+	margin: 0 auto;
+}
+
+footer {
+	display: inline-block;
+	background-color: #373737;
+	margin-top: 20px;
+	width: 100%;
+}
+
+table {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+	margin-left: 70px;
+	margin-right: 21%;
+}
+
+thead {
+	display: block;
+	
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	text-align: center;
+}
+
+th {
+	padding-bottom: 10px;
+	color: white; 
+	padding-right: 16px;
+}
+
+td {
+	color: white; 
+	padding-left: 5px;
+	padding-right: 9px;
+}
+
+#telefone-footer {
+	display: inline-block;
+	position: absolute;
+	margin-left: -585px;
+	margin-top: 170px;
+}
+
+#logo-footer {
+	text-align: center;
+	padding-right: 10px;
+	width: 177px;
+	height: 250px;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+#texto-footer {
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 14px;
+	color: #FFFFFF;
+}

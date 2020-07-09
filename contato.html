@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Coronel Kenn - Contato</title>
+
+		<link rel="icon" type="image/png" href="imagens/logo.png">
+		<link rel="stylesheet" href="css/contato.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+	</head>
+
+
+	<body>
+		<header>
+			<img id="logo-header" src="imagens/logo.png" alt="Logo da barbearia Coronel Kenn">
+			<h1 class="titulo">Coronel&nbsp;&nbsp;Kenn&nbsp;&nbsp;Barber&nbsp;&nbsp;Shop</h1>
+			<img id="logo-header" src="imagens/logo.png" alt="Logo da barbearia Coronel Kenn">
+			<input id="pesquisa" type="search" value="&nbsp;&nbsp;&nbsp;&telrec;" placeholder="&nbsp;&nbsp;&nbsp;&telrec;">
+		</header>
+
+		<div>
+			<nav class="menu">
+				<ul>
+					<li class="menu-itens"><a href="index.html">Home</a></li>
+					<li class="menu-itens"><a href="servicos.html">Serviços</a></li>
+					<li class="menu-itens"><a href="produtos.html">Produtos</a></li>
+					<li class="menu-itens"><a href="referencias.html">Referências e Dicas</a></li>
+					<li class="menu-itens"><a href="contato.html">Contato</a></li>
+					<li class="menu-itens"><a href="agendamento.html">Agende seu Horário</a></li>
+					<li class="menu-itens"><a href="cadastro.html">Login</a></li>
+					<li class="menu-itens"><a href="editar.html"><img id="eng-editar" width="35px" height="35px" margin-top="60px" vertical-align="top" src="imagens/2699.png"></a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<main>
+
+			<div class="formulario-contato">
+				<h2 id="titulo-formulario-novo">Fale Conosco</h2>
+				<p id="sub-formulario-novo">Como podemos te ajudar soldado !?</p>
+
+				<form class="formulario-contato-novo">
+					<label for="nomecompleto">Nome Completo</label>
+					<input class="campo-formulario" type="text" id="nomecompleto" placeholder="Digite seu nome" required>
+
+					<label for="cpf">CPF</label>
+					<input class="campo-formulario" type="tel" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="11" required>
+
+					<label for="telefone">Telefone</label>
+					<input class="campo-formulario" type="tel" id="telefone" placeholder="(xx) 00000-0000" maxlength="11" required>
+
+					<label for="email-1">Email</label>
+					<input class="campo-formulario" type="email" id="email-1" placeholder="email@domínio.com" required>
+
+					<label for="mensagem-novo">Escreva a sua mensagem</label>
+					<textarea cols="61" rows="10" id="mensagem-novo" placeholder="Escreva sua mensagem aqui"></textarea>
+
+
+				<section class="radio-box">
+					<p class="desejo-contato">Como deseja receber nosso contato ?</p>
+
+					<label class="radio-opcoes" for="radio-email-1"><input type="radio"  name="conato-1" value="email" id="radio-email-1" checked>Email</label>
+
+					<label class="radio-opcoes" for="radio-telefone-1"><input type="radio" name="conato-1" value="telefone" id="radio-telefone-1">Ligação</label>
+
+					<label class="radio-opcoes" for="radio-whatsapp-1"><input type="radio" name="conato-1" value=whatsapp id="radio-whatsapp-1">WhatsApp</label>
+				</section>
+
+				<section>
+					<p id="texto-horario">Quando deseja receber nosso contato ?</p>
+					<select class="select-horario">
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</section>
+
+				<section>
+					<label class="checkbox"><input id="texto-checkbox-1" type="checkbox" checked>Gostaria de receber novidades e ofertas exclusivas por email</label>
+					<label class="checkbox"><input id="texto-checkbox-2" type="checkbox" checked>Gostaria de receber novidades e ofertas exclusivas por WhatsApp</label>
+				</section>
+
+					<input id="entrar" type="submit" value="ENVIAR">
+				</form>
+			</div>
+		</main>
+
+		<div>
+			<footer>
+				<table>
+					<thead>
+						<tr>
+							<th>Horário de Fucionamento</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Segunda à Sábado</td>
+							<td>10h - 20h</td>
+						</tr>
+
+						<tr>
+							<td>Domingo e Feriados</td>
+							<td>10h - 14h</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table id="telefone-footer">
+					<thead>
+						<tr>
+							<th>Telefone</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>(11) 99123-5035</td>
+						</tr>
+					</tbody>
+				</table>
+				<img id="logo-footer" src="imagens/logo-branco-1.png" alt="Logo da barbearia Coronel Kenn">
+				<p id="texto-footer">&copy; Copyright Coronel Kenn Barber Shop 2020</p>
+			</footer>
+		</div>
+
+		<script src="javacript/contato.js"></script>
+	</body>
+</html>

@@ -1,0 +1,285 @@
+body {
+	background-color: #DDDDDD;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	margin-top: 10px;
+	height: 370px;
+	width: 100%;
+	background: linear-gradient(#DDDDDD, #888888);
+}
+
+#logo-header {
+	margin-top: 70px;
+}
+
+title {
+	font-size: 35px;
+}
+
+h1 {
+	display: inline-block;
+	vertical-align: top;
+	width: 64%;
+}
+
+.titulo {
+	font-family: 'New Rocker', cursive;
+	text-align: center;
+	font-size: 36px;
+	margin-top: 120px;
+	margin-left: 60px;
+	margin-right: 60px;
+	padding: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 6px solid rgba(124, 10, 39, 0.925);
+	border-radius: 17px;
+}
+
+#pesquisa {
+	background-color: #EEEEEE;
+	text-align: right;
+	font-size: 18px;
+	display: inline-block;
+	height: 40px;
+	width: 45%;
+	margin-left: 27%;
+	margin-bottom: 40px;
+	border: 1px solid rgba(124, 10, 39, 0.925);
+	border-radius: 6px;
+}
+
+.menu {
+	font-family: 'New Rocker', cursive;
+	position: absolute;
+	margin-left: 25px;
+	top: 20px;
+}
+
+.menu-itens {
+	display: inline-block;
+	margin: 0 17px 0 60px;
+}
+
+nav li:hover {
+	transform: scale(1.1);
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+#banner {
+	width: 100%;
+	height: 650px;
+	margin-top: 40px;
+	border-radius: 17px;
+}
+
+#home-sobre-nos {
+	background: linear-gradient(#DDDDDD, #BBBBBB);
+	padding-bottom: 30px;
+}
+
+.sub-titulo {
+	font-family: 'New Rocker', cursive;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 60px;
+	margin-right: 500px;
+	margin-left: 500px;
+	padding: 17px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 6px solid rgba(124, 10, 39, 0.925);
+	border-radius: 17px;
+}
+
+p {
+	text-align: center;
+}
+
+.texto-sobre {
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 70px;
+	margin-right: 50px;
+}
+
+#missao {
+	font-size: 20px;
+	margin-top: 80px;
+	margin-left: 20px;
+}
+
+#missao:hover {
+	transform: scale(1.4);
+}
+
+em strong {
+	color: rgba(124, 10, 39, 0.925);
+}
+
+.mapa {
+	background: linear-gradient(#DDDDDD, #888888);
+}
+
+#mapa-img {
+	margin-top: 20px;
+	margin-left: 7%;
+	margin-right: 9%;
+	margin-bottom: 30px;
+	border-radius: 6px;
+}
+
+.diferenciais {
+	background: linear-gradient(#DDDDDD, #888888);
+	padding: 2px;
+	padding-bottom: 2%;
+}
+
+h3 {
+	font-family: 'New Rocker', cursive;
+	font-size: 22px;
+	margin-bottom: 40px;
+	margin-top: 50px;
+	margin-left: 500px;
+	margin-right: 500px;
+	padding: 20px;
+	text-align: center;
+	border: 6px solid rgba(124, 10, 39, 0.925);
+	border-radius: 17px;
+}
+
+.diferenciais-itens {
+	font-style: italic;
+	margin-bottom: 30px;
+}
+
+.diferenciais-lista {
+	font-size: 22px;
+	display: inline-block;
+	vertical-align: top;
+	width: 35%;
+	margin: 19px;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.barbearia1 {
+	width: 50%;
+	padding-top: 2%;
+	border-radius: 3px;
+}
+
+.video-home {
+	display: inline-block;
+	height: 450px;
+	width: 800px;
+	margin-top: 50px;
+	margin-left: 60px;
+	margin-right: 8%;
+	margin-bottom: 30px;
+	border-radius: 3px;
+	box-shadow: 10px 10px 10px #000000;
+}
+
+.texto-video-home {
+	display: inline-block;
+	vertical-align: top;
+	width: 18%;
+	height: 300px;
+	margin-top: 100px;
+	border: dashed 4px #BBBBBB;
+	border-radius: 5px;
+	padding: 40px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	box-shadow: 10px 10px 8px #BBBBBB;
+}
+
+#citacao-video {
+	font-size: 30px;
+	text-align: normal;
+	margin-bottom: 70px;
+	color: rgba(124, 10, 39, 0.925);
+}
+
+#autor {
+	font-size: 20px;
+	margin-left: 80px;
+	color: rgba(124, 10, 39, 0.925);
+}
+
+footer {
+	display: inline-block;
+	background-color: #373737;
+	margin-top: 20px;
+	width: 100%;
+}
+
+table {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+	margin-left: 70px;
+	margin-right: 21%;
+}
+
+thead {
+	display: block;
+	
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	text-align: center;
+}
+
+th {
+	padding-bottom: 10px;
+	color: white; 
+	padding-right: 16px;
+}
+
+td {
+	color: white; 
+	padding-left: 5px;
+	padding-right: 9px;
+}
+
+#telefone-footer {
+	display: inline-block;
+	position: absolute;
+	margin-left: -585px;
+	margin-top: 170px;
+}
+
+#logo-footer {
+	text-align: center;
+	padding-right: 10px;
+	width: 177px;
+	height: 250px;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+#texto-footer {
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+@media screen and (max-width: 480px) {
+
+}
