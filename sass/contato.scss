@@ -1,0 +1,277 @@
+$black: #000000;
+$lead: #373737;
+$dark-grey:  #888888;
+$grey: #BBBBBB;
+$light-grey: #DDDDDD;
+$ice: #EEEEEE;
+$white: #FFFFFF; 
+$mustard: #C78C19;
+$bordeaux: rgba(124, 10, 39, 0.925);
+$green: #088C19;
+
+
+
+@mixin main_font-style {
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin secound_font-style {
+	font-family: 'New Rocker', cursive;
+}
+
+@mixin third_font-style {
+    font-family: 'Italianno', cursive;    
+}
+
+@mixin for-phone-only {
+	@media (max-width: 767.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+	@media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+	@media (min-width: 1200px) { @content; }	
+}
+
+@function calculateRem($size) {
+	@return $size / 16px * 1rem;
+}
+
+@mixin fontSize ($size) {
+	font-size: calculateRem($size);
+}
+
+$directions: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+	%no-margin-#{$direction} {margin-#{$direction}: 0;}
+	%default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+	%double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+	%triple-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 3;}
+	%half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+}
+
+@import 'header', 'footer';
+
+
+
+
+body {
+	background-color: $light-grey;
+	@include main_font-style;
+}
+
+main {
+	background-image: url(../imagens/background-2.jpg);
+	margin-top: 30px;
+}
+
+.produtos_breadcrumb {
+	width: 30%;
+}
+
+
+#breadcrumb_link1 {
+	display:inline-flex;
+	margin-left: 2%;
+	margin-top: 25px;
+    text-decoration: none;
+    color: $dark-grey; 
+	@include fontSize(14px);
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+#breadcrumb_link2 {
+	display:inline-flex;
+    text-decoration: none;
+    color: $dark-grey; 
+	@include fontSize(14px);
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+    .breadcrumb_image {
+        vertical-align: middle;
+        width: 10px;
+        @extend %default-margin-top;
+        margin: 5px;
+}
+
+
+.formulario-contato {
+	display: inline-block;
+	background-color: $light-grey;
+	width: 36%;
+	margin-right: 8%;
+	margin-left: 120px;
+	margin-top: 130px;
+	margin-bottom: 60px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	vertical-align: top;
+	border: 1px solid $bordeaux;
+	border-radius: 10px;
+}
+
+.formulario-novo:hover {
+	transform: scale(1.1);
+	border-color: $mustard;
+}
+
+#titulo-formulario-novo {
+    @include third_font-style;
+    letter-spacing: 2px;
+	@extend %double-margin-top;
+	text-align: center;
+    @include fontSize (30px);  
+}
+
+#sub-formulario-novo {
+    @include third_font-style;
+	font-size: 18px;
+	text-align: center;
+	margin-top: -20px;
+    
+    @include fontSize (30px);
+}
+
+#sub-formulario-novo:hover {
+	transform: scale(1.1);
+	font-style: italic;
+	color: $bordeaux; 
+	text-decoration: none;
+}
+
+.formulario-contato-novo {
+	display: block;
+	margin-top: 50px;
+	margin-left: 70px;
+	@extend %double-margin-right;
+	padding-bottom: 20px;
+	font-weight: bold;
+    @include fontSize (18px);
+}
+
+form label {
+	display: block;
+	margin: 0 0 10px;
+	margin-bottom: 6px;
+	color: $bordeaux; 
+}
+
+.titulo-campo-contato {
+    @include third_font-style;
+    @include fontSize (23px);
+}
+
+.campo-formulario {
+	display: block;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	padding: 10px;
+	width: 85%;
+    border-radius: 5px;
+	border: 3px;
+}
+
+textarea {
+	display: block;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	padding: 10px;
+	width: 85%;
+}
+
+.radio-box {
+	color: $black;
+	margin-top: 70px;
+	margin-bottom: 40px;
+}
+
+.radio-opcoes {
+    @include third_font-style;
+	font-weight: normal;
+    @include fontSize (23px);
+}
+
+.desejo-contato {
+    @include third_font-style;
+	color: $bordeaux; 
+	margin-top: 60px;
+	margin-left: 3px;
+	margin-bottom: 20px;
+	font-weight: bold;
+    @include fontSize (23px);
+}
+
+#texto-horario {
+    @include third_font-style;
+	color: $bordeaux; 
+	margin-top: 60px;
+	margin-left: 3px;
+	font-size: 18px;
+	font-weight: bold;
+    @include fontSize (23px);
+}
+
+.select-horario {
+	display: block;
+	@extend %double-margin-bottom;
+	background-color: $ice;
+	color: $mustard;
+}
+
+.checkbox {
+	font-weight: normal;
+	margin-left: -40px;
+    @include fontSize (14px);
+}
+
+#texto-checkbox-1 {
+	margin-top: 70px;
+	font-weight: normal;
+	color: $bordeaux;
+    @include fontSize (14px);
+}
+
+#texto-checkbox-2 {
+	margin-bottom: 25px;
+	font-weight: normal;
+	color: $bordeaux;
+}
+
+#entrar {
+	text-align: center;
+	background-color: $bordeaux;
+	size:  140px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-left: 140px;
+	@extend %triple-margin-top;
+	margin-bottom: 25px;
+	color: $white;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 1.5s all;
+    @include fontSize (14px);
+}
+
+#entrar:hover {
+	transform: scale(1.1); 
+	text-decoration: underline;
+	background-color: $mustard;
+}
+
+#entrar:active {
+	background-color: $mustard;
+}
+

@@ -1,0 +1,107 @@
+$black: #000000;
+$lead: #373737;
+$dark-grey:  #888888;
+$grey: #BBBBBB;
+$light-grey: #DDDDDD;
+$ice: #EEEEEE;
+$white: #FFFFFF; 
+$mustard: #C78C19;
+$bordeaux: rgba(124, 10, 39, 0.925);
+$green: #088C19;
+
+
+
+@mixin main_font-style {
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin secound_font-style {
+	font-family: 'New Rocker', cursive;
+}
+
+@mixin third_font-style {
+    font-family: 'Italianno', cursive;    
+}
+
+@mixin for-phone-only {
+	@media (max-width: 767.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+	@media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+	@media (min-width: 1200px) { @content; }	
+}
+
+@function calculateRem($size) {
+	@return $size / 16px * 1rem;
+}
+
+@mixin fontSize ($size) {
+	font-size: calculateRem($size);
+}
+
+$directions: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+	%no-margin-#{$direction} {margin-#{$direction}: 0;}
+	%default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+	%double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+	%triple-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 3;}
+	%half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+}
+
+@import 'header', 'footer';
+
+
+
+
+body {
+	background-color: $light-grey;
+	@include main_font-style;
+}
+
+main {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.produtos_breadcrumb {
+	width: 30%;
+}
+
+
+#breadcrumb_link1 {
+	display:inline-flex;
+	margin-left: 2%;
+	margin-top: 25px;
+    text-decoration: none;
+    color: $dark-grey; 
+	@include fontSize(14px);
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+#breadcrumb_link2 {
+	display:inline-flex;
+    text-decoration: none;
+    color: $dark-grey; 
+	@include fontSize(14px);
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+    .breadcrumb_image {
+        vertical-align: middle;
+        width: 10px;
+        @extend %default-margin-top;
+        margin: 5px;
+}
+

@@ -1,0 +1,497 @@
+$black: #000000;
+$lead: #373737;
+$dark-grey:  #888888;
+$grey: #BBBBBB;
+$light-grey: #DDDDDD;
+$ice: #EEEEEE;
+$white: #FFFFFF; 
+$mustard: #C78C19;
+$bordeaux: rgba(124, 10, 39, 0.925);
+$green: #088C19;
+
+
+
+@mixin main_font-style {
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin secound_font-style {
+	font-family: 'New Rocker', cursive;
+}
+
+@mixin third_font-style {
+    font-family: 'Italianno', cursive;    
+}
+
+@mixin for-phone-only {
+	@media (max-width: 767.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+	@media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+	@media (min-width: 1200px) { @content; }	
+}
+
+@function calculateRem($size) {
+	@return $size / 16px * 1rem;
+}
+
+@mixin fontSize ($size) {
+	font-size: calculateRem($size);
+}
+
+$directions: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+	%no-margin-#{$direction} {margin-#{$direction}: 0;}
+	%default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+	%double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+	%triple-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 3;}
+	%half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+}
+
+@import 'header', 'footer';
+
+
+
+
+body {
+    @include main_font-style;
+	background-color: $light-grey;
+	
+}
+
+main {
+	background-image: url(../imagens/Background-2.jpg);
+	@extend %triple-margin-top;
+}
+
+.produtos_breadcrumb {
+	width: 30%;
+  }
+  
+  #breadcrumb_link1 {
+	display: inline-flex;
+	margin-left: 2%;
+	margin-top: 25px;
+	text-decoration: none;
+	color: #888888;
+	font-size: 0.875rem;
+  }
+  #breadcrumb_link1:hover {
+	transform: scale(1.2);
+	color: rgba(124, 10, 39, 0.925);
+  }
+  
+  #breadcrumb_link2 {
+	display: inline-flex;
+	text-decoration: none;
+	font-weight: bold;
+	color: rgba(124, 10, 39, 0.925);
+	font-size: 0.875rem;
+  }
+  #breadcrumb_link2:hover {
+	transform: scale(1.1);
+	color: rgba(124, 10, 39, 0.925);
+  }
+  
+  .breadcrumb_image {
+	vertical-align: middle;
+	width: 10px;
+	margin: 5px;
+  }
+  
+.formulario-novo {
+	display: inline-block;
+	background: linear-gradient($light-grey, $dark-grey);
+	width: 38%;
+	margin-right: 8%;
+	margin-left: 120px;
+	margin-top: 130px;
+	margin-bottom: 80px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	vertical-align: top;
+	border: 1px solid $bordeaux;
+	border-radius: 10px;
+}
+
+.formulario-novo:hover {
+	transform: scale(1.02);
+	border-color: $mustard;
+}
+
+#titulo-formulario-novo {
+	font-weight: bold;
+	padding-bottom: 2px;
+	margin-bottom: 0px;
+	text-align: center;
+    @include fontSize(25px);
+}
+
+#sub-formulario-novo {
+	@include third_font-style;
+	text-align: center;
+	padding-top: 0px;
+    @include fontSize(32px);
+}
+
+#sub-formulario-novo:hover {
+	transform: scale(1.1);
+	font-style: italic;
+	color: $bordeaux;
+}
+
+.formulario-cadastro-novo {
+	display: inline-block;
+	@extend %triple-margin-top;
+	margin-left: 70px;
+	@extend %double-margin-right;
+	padding-bottom: 20px;
+	font-weight: bold;
+    @include fontSize(18px);
+}
+
+#obrigatório {
+	color: $black;
+	font-weight: bold;
+}
+
+form label {
+	display: inline-block;
+	margin: 0 0 10px;
+	margin-bottom: 6px;
+	color: $bordeaux;
+    @include fontSize(15px);
+}
+
+.campo-formulario {
+	display: inline-block;
+	margin: 0 0 20px;
+	@extend %double-margin-bottom;
+	padding: 10px;
+	width: 85%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#titulo-cpf {
+	width: 49%;
+}
+
+#cpf {
+	display: inline-block;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 7%;
+	padding: 12px;
+	width: 37%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#nascimento {
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 35px;
+	padding: 10px;
+	width: 168px;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(17px);
+}
+
+#titulo-sexo {
+	margin-right: 118px;
+}
+
+#sexo {
+	display: inline-block;
+	width: 23%;
+	margin-right: 110px;
+	margin: 0 0 20px;
+	@extend %double-margin-bottom;
+	padding: 8px;
+	background-color: $ice;
+	color: $mustard;
+	border-radius: 5px;
+	border: 3px;
+}    
+
+#cep {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-left: 50px;
+	margin-right: 55px;
+	padding: 10px;
+	width: 50%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#buscar-cep {
+	background-color: $bordeaux;
+	size: 90px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	color: $white;
+	cursor: pointer;
+	transition: 1s background-color;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(14px);
+}
+
+#buscar-cep:hover {
+	background-color: $mustard;
+	transform: scale(1.1);
+}
+
+#buscar-cep:active {
+	background-color: $mustard;
+}
+
+#titulo-endereco {
+	display: block;
+}
+
+#titulo-complemento {
+	width: 45%;
+}
+
+#titulo-bairro {
+	margin-right: 10%;
+}
+
+#complemento {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 27px;
+	padding: 10px;
+	width: 35%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#bairro {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 35px;
+	padding: 10px;
+	width: 40%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#titulo-cidade {
+	width: 75%;
+}
+
+#cidade {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 26px;
+	padding: 10px;
+	width: 64%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#estado {
+	display: inline-block;
+	font-weight: bold;
+	width: 15%;
+	margin-right: 70px;
+	margin: 0 0 20px;
+	@extend %double-margin-bottom;
+	padding: 10px;
+	background-color: $ice;
+	color: $mustard;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#titulo-telefone {
+	width: 33%;
+}
+
+#telefone {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 16px;
+	padding-left: 5px;
+	padding: 10px;
+	width: 25%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#email1 {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 20px;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	padding: 10px;
+	width: 52%;
+	border-radius: 5px;
+	border: 3px;
+    @include fontSize(13px);
+}
+
+#confimeSenha {
+	margin-bottom: 40px;
+}
+
+.checkbox {
+	font-weight: normal;
+	margin-left: -17px;
+    @include fontSize(15px);
+}
+
+#texto-checkbox-1 {
+	margin-top: 80px;
+	@include fontSize(18px);
+}
+
+#texto-checkbox-2 {
+	@extend %double-margin-bottom;
+}
+
+#entrar1 {
+	@include main_font-style;
+	text-align: center;
+	background-color: $bordeaux;
+	size: 140px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-left: 150px;
+	@extend %triple-margin-top;
+	margin-bottom: 25px;
+	color: $white;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 1.5s all;
+    @include fontSize(17px);
+}
+
+#entrar1:hover {
+	transform: scale(1.1);
+	background-color: $mustard;
+}
+
+#entrar1:active {
+	background-color: $mustard;
+}
+
+.formulario-antigo {
+	display: inline-block;
+	background: linear-gradient($light-grey, $dark-grey);
+	width: 36%;
+	margin-left: 40px;
+	margin-top: 130px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	vertical-align: top;
+	border: 1px solid $bordeaux;
+	border-radius: 10px;
+}
+
+.formulario-antigo:hover {
+	transform: scale(1.02);
+	border-color: $mustard;
+}
+
+#titulo-formulario-antigo {
+	font-weight: bold;
+	padding-bottom: 2px;
+	margin-bottom: 0px;
+	text-align: center;
+    @include fontSize(25px);
+}
+
+#sub-formulario-antigo {
+	@include third_font-style;
+	text-align: center;
+	padding-top: 0px;
+    @include fontSize(32px);
+}
+
+#sub-formulario-antigo:hover {
+	transform: scale(1.1);
+	font-style: italic;
+	color: $bordeaux;
+}
+
+.formulario-cadastro-antigo {
+	display: block;
+	@extend %triple-margin-top;
+	margin-left: 70px;
+	@extend %double-margin-right;
+	padding-bottom: 20px;
+	font-weight: bold;
+    @include fontSize(18px);
+}
+
+#email-2 {
+	margin-right: 20px;
+}
+
+#senha2 {
+	margin-right: 20px;
+}
+
+#entrar2 {
+	@include main_font-style;
+	text-align: center;
+	background-color: $bordeaux;
+	size: 140px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-left: 150px;
+	@extend %triple-margin-top;
+	margin-bottom: 25px;
+	color: $white;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 1.5s all;
+    @include fontSize(17px);
+}
+
+#entrar2:hover {
+	transform: scale(1.1);
+	text-decoration: underline;
+	background-color: $mustard;
+}
+
+#entrar2:active {
+	background-color: $mustard;
+}
+

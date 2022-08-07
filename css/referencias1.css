@@ -136,42 +136,10 @@ body {
 }
 
 main {
-  background-color: #DDDDDD;
+  width: 940px;
+  margin: 0 auto;
 }
 
-.produtos_breadcrumb {
-  width: 30%;
-}
 
-#breadcrumb_link1 {
-  display: inline-flex;
-  margin-left: 2%;
-  margin-top: 25px;
-  text-decoration: none;
-  color: #888888;
-  font-size: 0.875rem;
-}
-#breadcrumb_link1:hover {
-  transform: scale(1.2);
-  color: rgba(124, 10, 39, 0.925);
-}
 
-#breadcrumb_link2 {
-  display: inline-flex;
-  text-decoration: none;
-  font-weight: bold;
-  color: rgba(124, 10, 39, 0.925);
-  font-size: 0.875rem;
-}
-#breadcrumb_link2:hover {
-  transform: scale(1.1);
-  color: rgba(124, 10, 39, 0.925);
-}
-
-.breadcrumb_image {
-  vertical-align: middle;
-  width: 10px;
-  margin: 5px;
-}
-
-/*# sourceMappingURL=agendamento.css.map */
+/*# sourceMappingURL=referencias.css.map */

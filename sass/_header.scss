@@ -1,0 +1,84 @@
+header {
+	background: linear-gradient($light-grey, $dark-grey);
+	margin-top: 10px;
+	height: 370px;
+	width: 100%;
+	@include for-phone-only {
+        width: 100%;
+        padding: 15px 0;
+        flex-wrap: wrap;
+    }
+    @include for-tablet-only {
+        width: 90%;
+        padding: 20px 0;
+        margin-left: 5%;
+    }
+}
+
+#logo-header {
+	margin-top: 70px;
+}
+
+h1 {
+	display: inline-block;
+	vertical-align: top;
+	width: 64%;
+}
+
+.titulo {
+	@include secound_font-style;
+	text-align: center;
+	margin-top: 120px;
+	margin-left: 60px;
+	margin-right: 60px;
+	padding: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 2px solid $bordeaux;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px $lead;
+	@include fontSize(36px);
+}
+
+#pesquisa {
+	background-color: $ice;
+	text-align: right;
+	display: inline-block;
+	height: 40px;
+	width: 45%;
+	margin-left: 27%;
+	margin-bottom: 40px;
+	border: 1px solid $bordeaux;
+	border-radius: 6px;
+	@include fontSize(18px);
+}
+
+.menu {
+	@include secound_font-style;
+	position: absolute;
+	margin-left: 25px;
+	top: 20px;
+	background-attachment: fixed;
+}
+
+.menu-itens {
+	display: inline-block;
+	margin: 0 17px 0 60px;
+}
+
+nav li:hover {
+	transform: scale(1.1);
+}
+
+nav a {
+	text-transform: uppercase;
+	color: $black;
+	font-weight: bold;
+	text-decoration: none;
+	@include fontSize(17px);
+}
+
+nav a:hover {
+	color: $mustard;
+	text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+footer {
+	display: inline-block;
+	background-color: $lead;
+	margin-top: 20px;
+	width: 100%;
+}
+
+table {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+	margin-left: 70px;
+	margin-right: 21%;
+}
+
+thead {
+	display: block;
+	
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	@include fontSize(18px);
+}
+
+th {
+	padding-bottom: 10px;
+	color: $white; 
+	padding-right: 16px;
+}
+
+td {
+	color: $white; 
+	padding-left: 5px;
+	padding-right: 9px;
+}
+
+#telefone-footer {
+	display: inline-block;
+	position: absolute;
+	margin-left: -585px;
+	margin-top: 170px;
+}
+
+#logo-footer {
+	text-align: center;
+	padding-right: 10px;
+	width: 177px;
+	height: 250px;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+#texto-footer {
+	text-align: center;
+	padding-bottom: 15px;
+	color: $white;
+	@include fontSize(14px);
+}

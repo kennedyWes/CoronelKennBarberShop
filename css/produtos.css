@@ -1,252 +1,317 @@
- body {
-	background-color: #DDDDDD;
-	font-family: 'Montserrat', sans-serif;
+.breadcrumb_image {
+  margin-top: 10px;
 }
 
- header {
-	background: linear-gradient(#DDDDDD, #888888);
-	margin-top: 10px;
-	height: 370px;
-	width: 100%;
-}
-
-#logo-header {
-	margin-top: 70px;
-}
-
-h1 {
-	display: inline-block;
-	vertical-align: top;
-	width: 64%;
-}
-
-.titulo {
-	font-family: 'New Rocker', cursive;
-	text-align: center;
-	font-size: 36px;
-	margin-top: 120px;
-	margin-left: 60px;
-	margin-right: 60px;
-	padding: 15px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	border: 6px solid rgba(124, 10, 39, 0.925);
-	border-radius: 17px;
-}
-
-#pesquisa {
-	background-color: #EEEEEE;
-	text-align: right;
-	font-size: 18px;
-	display: inline-block;
-	height: 40px;
-	width: 45%;
-	margin-left: 27%;
-	margin-bottom: 40px;
-	border: 1px solid rgba(124, 10, 39, 0.925);
-	border-radius: 6px;
-}
-
-.menu {
-	font-family: 'New Rocker', cursive;
-	position: absolute;
-	margin-left: 25px;
-	top: 20px;
-}
-
-.menu-itens {
-	display: inline-block;
-	margin: 0 17px 0 60px;
-}
-
-nav li:hover {
-	transform: scale(1.1);
-}
-
-nav a {
-	text-transform: uppercase;
-	color: #000000;
-	font-weight: bold;
-	font-size: 17px;
-	text-decoration: none;
-}
-
-nav a:hover {
-	color: #C78C19;
-	text-decoration: underline;
-}
-
-main {
-	background-color: #DDDDDD;
-}
-
-#produtos-banner {
-	width: 100%;
-	height: 630px;
-	margin-top: 40px;
-	border-radius: 17px;
-}
-
-#titulo-banner {
-	font-family: 'Italianno', cursive;
-	position: absolute;
-	display: inline-block;
-	margin-left: 620px;
-	margin-top: 60px;
-	font-size: 55px;
-	font-weight: bold;
-	color: #FFFFFF;
-	text-align: center;
-}
-
-.produtos-apresentacao {
-	background-color: #BBBBBB;
-	margin-top: 40px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 35px;
-	padding-right: 25px;
-}
-
-#titulo-descricao {
-	font-family: 'New Rocker', cursive;
-	margin-bottom: 70px;
-	margin-top: 30px;
-	margin-left: 500px;
-	margin-right: 500px;
-	padding: 20px;
-	text-align: center;
-	border: 7px solid rgba(124, 10, 39, 0.925);
-	border-radius: 17px;
-}
-
-#texto-ap-produtos {
-	text-align: center;
-	font-size: 20px;
-	margin-left: 90px;
-	margin-right: 90px;
-}
-
-.servicos li {
-	font-size: 20px;
-	display: inline-block;
-	vertical-align: top;
-	width: 20%;
-	margin: 25px;
-	margin-top: 100px;
-	margin-left: 2%;
-	margin-right: 2%;
-	border: solid 2px rgba(124, 10, 39, 0.925);
-	border-radius: 15px;
-	background-color: #CCCCCC;
-	box-shadow: 10px 10px 10px #000000;
-}
-
-.servicos li:hover {
-	transform: scale(1.1);
-	border-color: #C78C19;
-}
-
-.servicos li:hover h2 {
-	font-size: 32px;
-}
-
-.servicos li:active {
-	border-color: #088C19;
-}
-
-h3{
-	font-family: 'New Rocker', cursive;
-	margin-top: 35px;
-	text-align: center;
-	font-size: 22px;
+.fotos-servicos, #titulo-descricao {
+  margin-top: 30px;
 }
 
 .texto-servicos {
-	text-align: center;
-	margin-top: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 50px;
+  margin-left: 10px;
 }
 
-.fotos-servicos {
-	width: 286px;
-	height: 400px;
-	margin-top: 30px;
-	margin-left: 4px;
-	margin-right: 4px;
-	border-radius: 35px;
-	filter: grayscale(100%);
-	transition: 3s all;
+.texto-servicos {
+  margin-right: 10px;
 }
 
-.fotos-servicos:hover {
-	transform: scale(1.2);
-	filter: grayscale(0%);
+header {
+  background: linear-gradient(#DDDDDD, #888888);
+  margin-top: 10px;
+  height: 370px;
+  width: 100%;
 }
 
+#logo-header {
+  margin-top: 70px;
+}
 
-.precos{
-	text-align: center;
-	font-weight: bold;
+h1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 64%;
+}
+
+.titulo {
+  font-family: "New Rocker", cursive;
+  text-align: center;
+  margin-top: 120px;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 2px solid rgba(124, 10, 39, 0.925);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #373737;
+  font-size: 2.25rem;
+}
+
+#pesquisa {
+  background-color: #EEEEEE;
+  text-align: right;
+  display: inline-block;
+  height: 40px;
+  width: 45%;
+  margin-left: 27%;
+  margin-bottom: 40px;
+  border: 1px solid rgba(124, 10, 39, 0.925);
+  border-radius: 6px;
+  font-size: 1.125rem;
+}
+
+.menu {
+  font-family: "New Rocker", cursive;
+  position: absolute;
+  margin-left: 25px;
+  top: 20px;
+}
+
+.menu-itens {
+  display: inline-block;
+  margin: 0 17px 0 60px;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.0625rem;
+}
+
+nav a:hover {
+  color: #C78C19;
+  text-decoration: underline;
 }
 
 footer {
-	display: inline-block;
-	background-color: #373737;
-	margin-top: 20px;
-	width: 100%;
+  display: inline-block;
+  background-color: #373737;
+  margin-top: 20px;
+  width: 100%;
 }
 
 table {
-	display: inline-block;
-	vertical-align: top;
-	margin-top: 50px;
-	margin-left: 70px;
-	margin-right: 21%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-left: 70px;
+  margin-right: 21%;
 }
 
 thead {
-	display: block;
-	
-	font-weight: bold;
-	font-size: 18px;
-	width: 100%;
-	text-align: center;
+  display: block;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 1.125rem;
 }
 
 th {
-	padding-bottom: 10px;
-	color: white; 
-	padding-right: 16px;
+  padding-bottom: 10px;
+  color: #FFFFFF;
+  padding-right: 16px;
 }
 
 td {
-	color: white; 
-	padding-left: 5px;
-	padding-right: 9px;
+  color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 9px;
 }
 
 #telefone-footer {
-	display: inline-block;
-	position: absolute;
-	margin-left: -585px;
-	margin-top: 170px;
+  display: inline-block;
+  position: absolute;
+  margin-left: -585px;
+  margin-top: 170px;
 }
 
 #logo-footer {
-	text-align: center;
-	padding-right: 10px;
-	width: 177px;
-	height: 250px;
-	margin-top: 10px;
-	padding-top: 20px;
+  text-align: center;
+  padding-right: 10px;
+  width: 177px;
+  height: 250px;
+  margin-top: 10px;
+  padding-top: 20px;
 }
 
 #texto-footer {
-	text-align: center;
-	padding-bottom: 15px;
-	font-size: 14px;
-	color: #FFFFFF;
+  text-align: center;
+  padding-bottom: 15px;
+  color: #FFFFFF;
+  font-size: 0.875rem;
 }
+
+body {
+  background-color: #DDDDDD;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 767.98px) {
+  body {
+    width: 90%;
+    padding: 15px 0;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  body {
+    width: 90%;
+    padding: 20px 0;
+    margin-left: 5%;
+  }
+}
+
+main {
+  background-color: #DDDDDD;
+}
+
+.produtos_breadcrumb {
+  width: 30%;
+}
+
+#breadcrumb_link1 {
+  display: inline-flex;
+  margin-left: 2%;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #888888;
+  font-size: 0.875rem;
+}
+#breadcrumb_link1:hover {
+  transform: scale(1.2);
+  color: rgba(124, 10, 39, 0.925);
+}
+
+#breadcrumb_link2 {
+  display: inline-flex;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(124, 10, 39, 0.925);
+  font-size: 0.875rem;
+}
+#breadcrumb_link2:hover {
+  transform: scale(1.1);
+  color: rgba(124, 10, 39, 0.925);
+}
+
+.breadcrumb_image {
+  vertical-align: middle;
+  width: 10px;
+  margin: 5px;
+}
+
+#produtos-banner {
+  width: 100%;
+  height: 630px;
+  margin-top: 20px;
+  border-radius: 17px;
+}
+
+#titulo-banner {
+  font-family: "Italianno", cursive;
+  position: absolute;
+  display: inline-block;
+  margin-left: 620px;
+  margin-top: 60px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 3.4375rem;
+}
+
+.produtos-apresentacao {
+  background-color: #BBBBBB;
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 25px;
+}
+
+#titulo-descricao {
+  font-family: "New Rocker", cursive;
+  margin-bottom: 70px;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid rgba(124, 10, 39, 0.925);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #373737;
+}
+
+#texto-ap-produtos {
+  text-align: center;
+  margin-left: 90px;
+  margin-right: 90px;
+  font-size: 1.25rem;
+}
+
+.servicos li {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin: 25px;
+  margin-top: 100px;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: solid 2px rgba(124, 10, 39, 0.925);
+  border-radius: 15px;
+  background-color: #CCCCCC;
+  box-shadow: 10px 10px 10px #000000;
+  font-size: 0.875rem;
+}
+
+.servicos li:hover {
+  transform: scale(1.1);
+  border-color: #C78C19;
+}
+
+.servicos li:hover h2 {
+  font-size: 2rem;
+}
+
+.servicos li:active {
+  border-color: #088C19;
+}
+
+h3 {
+  font-family: "New Rocker", cursive;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 1.375rem;
+}
+
+.texto-servicos {
+  font-family: "Italianno", cursive;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 1.6875rem;
+}
+
+.fotos-servicos {
+  width: 286px;
+  height: 400px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 35px;
+  filter: grayscale(100%);
+  transition: 3s all;
+}
+
+.fotos-servicos:hover {
+  transform: scale(1.07);
+  filter: grayscale(0%);
+}
+
+.precos {
+  text-align: center;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=produtos.css.map */

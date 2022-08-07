@@ -37,45 +37,63 @@
 			</nav>
 		</div>
 
-		<main>
+		<div clas="produtos_breadcrumb">
+			<a href="index.html" id="breadcrumb_link1">Home</a>
+			<img class="breadcrumb_image" src="imagens/arrow.svg" alt="Seta">
+			<a href="cadastro.html" id="breadcrumb_link2">Login</a>
+		</div>
 
+		<main>
 			<div class="formulario-novo">
 				<h2 id="titulo-formulario-novo">Você é novo no clube ?</h2>
 				<p id="sub-formulario-novo">Faça seu cadastro aqui !</p>
 
 				<form class="formulario-cadastro-novo" id="mensagens-erro">
 					<label for="nomecompleto">Nome Completo<strong id="obrigatório">&nbsp;*</strong></label>
-					<input type="text" id="nomecompleto" class="campo-formulario" required placeholder="Digite seu nome">
+					<input type="text" id="nomecompleto" class="campo-formulario" placeholder="Digite seu nome" data-tipo="nome" required>
 					<br>
 
 					<label id="titulo-cpf" for="cpf">CPF<strong id="obrigatório">&nbsp;*</strong></label>
 					<label id="titulo-nascimento" for="nascimento">Data de Nascimento<strong id="obrigatório">&nbsp;*</strong></label>
 
-					<input type="tel" id="cpf" required placeholder="xxx.xxx.xxx-xx" maxlength="11">
-					<input type="date" id="nascimento" required placeholder="00/00/00">
-
+					<input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="11" data-tipo="cpf" required>
+					<input type="date" id="nascimento" placeholder="00/00/00" data-tipo="dataNascimento" required>
+				
+				    <label id="titulo-sexo" for="sexo">Sexo<strong id="obrigatório">&nbsp;*</strong></label>	
 					<label for="cep">CEP<strong id="obrigatório">&nbsp;*</strong></label>
 					<br>
-					<input type="number" id="cep" required placeholder="00000-000" maxlength="8">
+					
+					
+				    <select id="sexo" data-tipo="sexo" required>
+						<option value=""></option>
+						<option value="Feminino">Feminino</option>
+						<option value="Masculino">Masculino</option>
+						<option value="Transsexual">Transsexual</option>
+						<option value="Outros">Outros</option>
+					</select>
 
-					<input type="submit" id="buscar-cep" value="Buscar CEP">
+					<input type="text" id="cep" placeholder="00000-000" maxlength="8" pattern="[\d]{5}-?[\d]{3}" data-tipo="cep"required>
+					
 
 					<label id="titulo-endereco" for="endereco">Endereço</label>
-					<input type="text" id="endereco" class="campo-formulario" required placeholder="Digite seu endereço">
+					<input type="text" id="endereco" class="campo-formulario" placeholder="Digite seu endereço" data-tipo="endereco" required>
+					
 
 					<label id="titulo-complemento" for="complemento">Complemento</label>
 					<label id="titulo-bairro" for="bairro">Bairro</label>
 
 					<input type="text" id="complemento" placeholder="Opicional">
-					<input type="text" id="bairro" placeholder="Digite o bairro">
-
+					
+					<input type="text" id="bairro" placeholder="Digite o bairro" data-tipo="bairro" required>
+					
 
 					<label id="titulo-cidade" for="cidade">Cidade</label>
 					<label id="titulo-estado" for="estado">UF<strong id="obrigatório">&nbsp;*</strong></label>
 
-					<input type="text" id="cidade" placeholder="Digite a sua cidade">
+					<input type="text" id="cidade" placeholder="Digite a sua cidade" data-tipo="cidade" required>
+					
 
-					<select id="estado" required>
+					<select id="estado" data-tipo="estado" required>
 						<option value=""></option>
 						<option value="AC">AC</option>
 						<option value="AL">AL</option>
@@ -110,22 +128,26 @@
 					<label id="titulo-email" for="email1">Email<strong id="obrigatório">&nbsp;*</strong></label>
 					<br>
 
-					<input type="tel" id="telefone" required placeholder="(xx) 00000-0000" maxlength="12">
-					<input type="email" id="email1" required placeholder="email@domínio.com">
+					<input type="tel" id="telefone" placeholder="(xx) 00000-0000" maxlength="12" data-tipo="telefone" required>
+					
+
+					<input type="email" id="email1" placeholder="email@domínio.com" data-tipo="email" required>
+					
 
 					<label for="senha1">Senha<strong id="obrigatório">&nbsp;*</strong></label>
-					<input type="password" id="senha1" class="campo-formulario" required placeholder="Escolha uma senha de 6 a 8 caracteres">
+					<input type="password" id="senha1" class="campo-formulario" placeholder="Escolha uma senha de 6 a 10 caracteres" pattern="^(?=.*[a-z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,10}$" title="A senha deve conter de 6 a 10 dígitos, contendo ao menos um número e não pode conter símbolos" data-tipo="senha1" required>
+					
 
 					<label for="confirmeSenha">Confirme a Senha<strong id="obrigatório">&nbsp;*</strong></label>
-					<input type="password" id="confirmeSenha" class="campo-formulario" placeholder="Confirme a senha escolhida" required>
-
+					<input type="password" id="confirmeSenha" class="campo-formulario" placeholder="Confirme a senha escolhida" pattern="^(?=.*[a-z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,10}$" title="A senha deve ser igual a senha escolhida" data-tipo="senha2" required>
+					
 
 				<section class="checkbox">
 					<label class="checkbox"><input type="checkbox" id="texto-checkbox-1" checked>Gostaria de receber novidades e ofertas exclusivas por email</label>
 					<label class="checkbox"><input type="checkbox" id="texto-checkbox-2" checked>Gostaria de receber novidades e ofertas exclusivas por WhatsApp</label>
 				</section>
 
-					<input id="entrar" type="submit" value="ENVIAR">
+				<button id="entrar1" type="submit">Enviar</button>
 				</form>
 			</div>
 
@@ -133,14 +155,16 @@
 				<h3 id="titulo-formulario-antigo">Já é Veterano de Guerra ?</h3>
 				<p id="sub-formulario-antigo">Digite seus dados aqui</p>
 
-				<form class="formulario-contato-antigo">
+				<form class="formulario-cadastro-antigo">
 					<label for="email-2">Email</label>
-					<input type="email" id="email-2" class="campo-formulario" required placeholder="email@domínio.com">
+					<input type="email" id="email-2" class="campo-formulario" placeholder="email@domínio.com" data-tipo="email" data-tipo="email" required>
+					
 
 					<label for="senha-2">Senha</label>
-					<input class="campo-formulario" type="password" id="senha-2" placeholder="Digite a sua senha" required>
+					<input class="campo-formulario" type="password" id="senha-2" placeholder="Digite a sua senha" pattern="^(?=.*[a-z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,10}$" data-tipo="senha3" title="A senha deve conter de 6 a 10 dígitos, contendo ao menos um número e não pode conter símbolos" data-tipo="senha1" required>
+					
 
-					<input id="entrar" type="submit" value="ENVIAR">
+					<button id="entrar2" type="submit">Enviar</button>
 				</form>
 			</section>
 
@@ -186,7 +210,6 @@
 			</footer>
 		</div>
 
-		<script src="javacript/cadastro.js"></script>
-		<script src="javascript/form.js"></script>
+		<script src="./js/app.js" type="module"></script>
 	</body>
 </html>

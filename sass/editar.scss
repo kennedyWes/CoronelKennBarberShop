@@ -85,6 +85,42 @@ main {
 	margin-top: 30px;
 }
 
+.produtos_breadcrumb {
+	width: 30%;
+}
+
+
+#breadcrumb_link1 {
+	display:inline-flex;
+	margin-left: 2%;
+	margin-top: 25px;
+    text-decoration: none;
+    color: $dark-grey; 
+	@include fontSize(14px);
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+#breadcrumb_link2 {
+	display:inline-flex;
+    text-decoration: none;
+    color: $dark-grey; 
+	@include fontSize(14px);
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+    .breadcrumb_image {
+        vertical-align: middle;
+        width: 10px;
+        @extend %default-margin-top;
+        margin: 5px;
+}
+
 .formulario-novo {
 	display: inline-block;
 	background: linear-gradient(#DDDDDD, #888888);

@@ -1,0 +1,244 @@
+$black: #000000;
+$lead: #373737;
+$dark-grey:  #888888;
+$grey: #BBBBBB;
+$light-grey: #DDDDDD;
+$ice: #EEEEEE;
+$white: #FFFFFF; 
+$mustard: #C78C19;
+$bordeaux: rgba(124, 10, 39, 0.925);
+$green: #088C19;
+
+
+
+@mixin main_font-style {
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin secound_font-style {
+	font-family: 'New Rocker', cursive;
+}
+
+@mixin third_font-style {
+    font-family: 'Italianno', cursive;    
+}
+
+@mixin for-phone-only {
+	@media (max-width: 767.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+	@media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+	@media (min-width: 1200px) { @content; }	
+}
+
+@function calculateRem($size) {
+	@return $size / 16px * 1rem;
+}
+
+@mixin fontSize ($size) {
+	font-size: calculateRem($size);
+}
+
+$directions: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+	%no-margin-#{$direction} {margin-#{$direction}: 0;}
+	%default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+	%double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+	%triple-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 3;}
+	%half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+}
+
+@import 'header', 'footer';
+
+
+
+
+body {
+	background-color: $light-grey;
+	@include main_font-style;
+	@include for-phone-only {
+        width: 90%;
+        padding: 15px 0;
+        flex-wrap: wrap;
+    }
+}
+
+
+main {
+	background-color: $light-grey;
+}
+
+.servicos_breadcrumb {
+	width: 30%;
+}
+
+
+#breadcrumb_link1 {
+	display:inline-flex;
+	margin-left: 2%;
+	margin-top: 25px;
+    text-decoration: none;
+    color: $dark-grey;
+	@include fontSize(14px); 
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+#breadcrumb_link2 {
+	display:inline-flex;
+    text-decoration: none;
+    color: $dark-grey; 
+	@include fontSize(14px);
+    &:hover {
+		transform: scale(1.2);
+        color: $bordeaux;
+    }
+}
+
+    .breadcrumb_image {
+        vertical-align: middle;
+        width: 10px;
+        margin-top: 10px;
+        margin: 5px;
+}
+ 
+#servicos-banner {
+	display: inline-block;
+	width: 100%;
+	height: 630px;
+	@extend %triple-margin-top;
+	border-radius: 17px;
+}
+
+#titulo-banner {
+	@include third_font-style;
+	position: absolute;
+	display: inline-block;
+	margin-left: 40px;
+	margin-top: 80px;
+	font-weight: bold;
+	color: $white;
+	text-align: center;
+	@include fontSize(50px);
+}
+
+.servicos-apresentacao {
+	background: linear-gradient($light-grey, $dark-grey);
+	margin-top: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 35px;
+	padding-right: 25px;
+}
+
+#titulo-descricao {
+	@include secound_font-style;
+	margin-bottom: 80px;
+	@extend %double-margin-top;
+	margin-left: 500px;
+	margin-right: 500px;
+	padding: 20px;
+	text-align: center;
+	border: 2px solid $bordeaux;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px $lead;
+}
+
+#texto-ap-servicos {
+	text-align: center;
+	margin-left: 33px;
+	margin-right: 33px;
+	@include fontSize(20px);
+}
+
+.principal-servicos {
+	background: linear-gradient($light-grey, $dark-grey);
+	@include for-tablet-only {
+        width: 90%;
+        padding: 20px 0;
+		margin-left: 5%;
+    }
+}
+
+ul {
+	display: inline-block;
+}
+
+.servicos li {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	margin: 25px;
+	margin-top: 100px;
+	margin-left: 7%;
+	margin-right: 4%;
+	border: solid 2px $bordeaux;
+	border-radius: 15px;
+	background-color: #CCCCCC;
+	box-shadow: 10px 10px 10px $black;
+	@include fontSize(20px);
+	@include for-tablet-only {
+        width: 90%;
+        padding: 20px 0;
+		margin-left: 5%;
+    }
+}
+
+.servicos li:hover {
+	transform: scale(1.1);
+	border-color: $mustard;
+}
+
+.servicos li:hover h2 {
+	@include fontSize(32px);
+}
+
+.servicos li:active {
+	border-color: $green;
+}
+
+h3{
+	@include secound_font-style;
+	margin-top: 35px;
+	text-align: center;
+	@include fontSize(22px);
+}
+
+.texto-servicos {
+	@include third_font-style;
+	text-align: center;
+	margin-top: 50px;
+	@extend %default-margin-left, %default-margin-right;
+	@extend %double-margin-bottom;
+	@include fontSize(28px);
+}
+
+.fotos-servicos {
+	width: 286px;
+	height: 400px;
+	@extend %triple-margin-top;
+	margin-left: 4px;
+	margin-right: 4px;
+	border-radius: 35px;
+	filter: grayscale(100%);
+	transition: 3s all;
+}
+
+.fotos-servicos:hover {
+	transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+
+.precos{
+	text-align: center;
+	font-weight: bold;
+}

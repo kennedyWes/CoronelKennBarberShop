@@ -1,0 +1,254 @@
+$black: #000000;
+$lead: #373737;
+$dark-grey:  #888888;
+$grey: #BBBBBB;
+$light-grey: #DDDDDD;
+$ice: #EEEEEE;
+$white: #FFFFFF; 
+$mustard: #C78C19;
+$bordeaux: rgba(124, 10, 39, 0.925);
+
+
+
+@mixin main_font-style {
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin secound_font-style {
+	font-family: 'New Rocker', cursive;
+}
+
+@mixin third_font-style {
+    font-family: 'Italianno', cursive;    
+}
+
+@mixin for-phone-only {
+	@media (max-width: 767.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+	@media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+	@media (min-width: 1200px) { @content; }	
+}
+
+@function calculateRem($size) {
+	@return $size / 16px * 1rem;
+}
+
+@mixin fontSize ($size) {
+	font-size: calculateRem($size);
+}
+
+$directions: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+	%no-margin-#{$direction} {margin-#{$direction}: 0;}
+	%default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+	%double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+	%triple-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 3;}
+	%half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+}
+
+@import 'header', 'footer';
+
+
+
+
+body {
+	background-color: $light-grey;
+	@include  main_font-style;
+	@include for-phone-only {
+        width: 90%;
+        padding: 15px 0;
+        flex-wrap: wrap;
+    }
+    @include for-tablet-only {
+        width: 90%;
+        padding: 20px 0;
+        margin-left: 5%;
+    }
+}
+
+.check-point {
+	display: inline-block;
+	margin-left: 55px;
+	top: 20px;
+ 
+}	
+	
+.check-point-itens {
+	@include secound_font-style;
+	display: inline-block;
+	margin: 10 57px 0 60px;
+}
+
+#banner {
+	width: 50%;
+	height: 650px;
+	margin-top: 40px;
+	border-radius: 17px;
+}
+
+#home-sobre-nos {
+	background: linear-gradient($light-grey, $grey);
+	padding-bottom: 30px;
+}
+
+.sub-titulo {
+	@include  secound_font-style;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 60px;
+	margin-right: 500px;
+	margin-left: 500px;
+	padding: 17px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 2px solid $bordeaux;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px $lead;
+}
+
+p {
+	text-align: center;
+}
+
+.texto-sobre {
+	@include  main_font-style;
+	letter-spacing: 1.4px;
+	margin-left: 70px;
+	margin-right: 50px;
+	@include fontSize(18px);
+}
+
+#missao {
+	letter-spacing: 1.4px;
+	margin-top: 80px;
+	@extend %double-margin-left;
+	@include fontSize(20px);
+}
+
+#missao:hover {
+	transform: scale(1.1);
+}
+
+em strong {
+	color: $bordeaux;
+}
+
+.mapa {
+	background: linear-gradient($light-grey, $dark-grey);
+}
+
+#mapa-img {
+	@extend %double-margin-top;
+	margin-left: 7%;
+	margin-right: 9%;
+	@extend %triple-margin-bottom;
+	border-radius: 6px;
+}
+
+.diferenciais {
+	background: linear-gradient($light-grey, $dark-grey);
+	padding: 2px;
+	padding-bottom: 2%;
+
+    &-lista {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        margin: 19px;
+        margin-right: 18%;
+		@include fontSize(18px);
+  }
+}
+
+h3 {
+	@include  secound_font-style;
+	margin-bottom: 40px;
+	margin-top: 50px;
+	margin-left: 500px;
+	margin-right: 500px;
+	padding: 20px;
+	text-align: center;
+	border: 2px solid $bordeaux;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px $lead;
+	@include fontSize(22px);
+}
+
+
+.diferenciais-itens {
+    @extend %double-margin-top;
+    font-style: italic;
+    @extend %triple-margin-bottom;
+}
+
+.barbearia1 {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-left: 4%;
+    @extend %double-margin-bottom;
+    margin-right: 13%;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px $black;
+}
+
+.barbearia2 {
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 25%;
+    margin-top: 2%;
+    height: 570px;
+    margin-bottom: -310px;
+    margin-right: 5%;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px $black;
+}
+ 
+.video-home {
+	display: inline-block;
+	height: 450px;
+	width: 800px;
+	margin-top: 50px;
+	margin-left: 60px;
+	margin-right: 8%;
+	@extend %triple-margin-bottom;
+	border-radius: 3px;
+	box-shadow: 10px 10px 10px $black;
+}
+
+.texto-video-home {
+	display: inline-block;
+	vertical-align: top;
+	width: 18%;
+	height: 300px;
+	margin-top: 100px;
+	border: dashed 4px $grey;
+	border-radius: 5px;
+	padding: 40px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	box-shadow: 10px 10px 8px $dark-grey;
+}
+
+#citacao-video {
+	text-align: normal;
+	margin-bottom: 70px;
+	color: $bordeaux;
+	@include fontSize(30px);
+}
+
+#autor {
+	margin-left: 80px;
+	color: $bordeaux;
+	@include fontSize(20px);
+}
+
